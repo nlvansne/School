@@ -1,0 +1,400 @@
+[ 4208.763548] Loading module...
+[ 4208.763551] pid: 1 | pname: systemd | state: 1
+[ 4208.763552] pid: 2 | pname: kthreadd | state: 1
+[ 4208.763553] pid: 3 | pname: ksoftirqd/0 | state: 1
+[ 4208.763555] pid: 5 | pname: kworker/0:0H | state: 1
+[ 4208.763556] pid: 7 | pname: rcu_sched | state: 1
+[ 4208.763557] pid: 8 | pname: rcu_bh | state: 1
+[ 4208.763558] pid: 9 | pname: migration/0 | state: 1
+[ 4208.763560] pid: 10 | pname: watchdog/0 | state: 1
+[ 4208.763561] pid: 11 | pname: kdevtmpfs | state: 1
+[ 4208.763562] pid: 12 | pname: netns | state: 1
+[ 4208.763563] pid: 13 | pname: perf | state: 1
+[ 4208.763564] pid: 14 | pname: khungtaskd | state: 1
+[ 4208.763565] pid: 15 | pname: writeback | state: 1
+[ 4208.763567] pid: 16 | pname: ksmd | state: 1
+[ 4208.763568] pid: 17 | pname: khugepaged | state: 1
+[ 4208.763569] pid: 18 | pname: crypto | state: 1
+[ 4208.763570] pid: 19 | pname: kintegrityd | state: 1
+[ 4208.763571] pid: 20 | pname: bioset | state: 1
+[ 4208.763572] pid: 21 | pname: kblockd | state: 1
+[ 4208.763574] pid: 22 | pname: ata_sff | state: 1
+[ 4208.763575] pid: 23 | pname: md | state: 1
+[ 4208.763576] pid: 24 | pname: devfreq_wq | state: 1
+[ 4208.763577] pid: 28 | pname: kswapd0 | state: 1
+[ 4208.763578] pid: 29 | pname: vmstat | state: 1
+[ 4208.763579] pid: 30 | pname: fsnotify_mark | state: 1
+[ 4208.763581] pid: 31 | pname: ecryptfs-kthrea | state: 1
+[ 4208.763582] pid: 47 | pname: kthrotld | state: 1
+[ 4208.763583] pid: 48 | pname: acpi_thermal_pm | state: 1
+[ 4208.763584] pid: 49 | pname: bioset | state: 1
+[ 4208.763585] pid: 50 | pname: bioset | state: 1
+[ 4208.763587] pid: 51 | pname: bioset | state: 1
+[ 4208.763588] pid: 52 | pname: bioset | state: 1
+[ 4208.763589] pid: 53 | pname: bioset | state: 1
+[ 4208.763590] pid: 54 | pname: bioset | state: 1
+[ 4208.763591] pid: 55 | pname: bioset | state: 1
+[ 4208.763592] pid: 56 | pname: bioset | state: 1
+[ 4208.763593] pid: 57 | pname: scsi_eh_0 | state: 1
+[ 4208.763595] pid: 58 | pname: scsi_tmf_0 | state: 1
+[ 4208.763596] pid: 59 | pname: scsi_eh_1 | state: 1
+[ 4208.763597] pid: 60 | pname: scsi_tmf_1 | state: 1
+[ 4208.763598] pid: 66 | pname: ipv6_addrconf | state: 1
+[ 4208.763599] pid: 79 | pname: deferwq | state: 1
+[ 4208.763600] pid: 80 | pname: charger_manager | state: 1
+[ 4208.763602] pid: 81 | pname: bioset | state: 1
+[ 4208.763603] pid: 134 | pname: kpsmoused | state: 1
+[ 4208.763604] pid: 147 | pname: kworker/0:1H | state: 1
+[ 4208.763605] pid: 170 | pname: scsi_eh_2 | state: 1
+[ 4208.763606] pid: 171 | pname: scsi_tmf_2 | state: 1
+[ 4208.763608] pid: 172 | pname: bioset | state: 1
+[ 4208.763609] pid: 247 | pname: raid5wq | state: 1
+[ 4208.763610] pid: 279 | pname: bioset | state: 1
+[ 4208.763611] pid: 307 | pname: jbd2/sda1-8 | state: 1
+[ 4208.763612] pid: 308 | pname: ext4-rsv-conver | state: 1
+[ 4208.763614] pid: 373 | pname: systemd-journal | state: 1
+[ 4208.763615] pid: 381 | pname: kauditd | state: 1
+[ 4208.763616] pid: 394 | pname: iscsi_eh | state: 1
+[ 4208.763617] pid: 398 | pname: ib_addr | state: 1
+[ 4208.763618] pid: 404 | pname: lvmetad | state: 1
+[ 4208.763619] pid: 416 | pname: ib_mcast | state: 1
+[ 4208.763621] pid: 417 | pname: ib_nl_sa_wq | state: 1
+[ 4208.763622] pid: 418 | pname: systemd-udevd | state: 1
+[ 4208.763623] pid: 422 | pname: ib_cm | state: 1
+[ 4208.763624] pid: 423 | pname: iw_cm_wq | state: 1
+[ 4208.763625] pid: 424 | pname: rdma_cm | state: 1
+[ 4208.763627] pid: 506 | pname: systemd-timesyn | state: 1
+[ 4208.763628] pid: 613 | pname: iprt-VBoxWQueue | state: 1
+[ 4208.763629] pid: 704 | pname: dhclient | state: 1
+[ 4208.763630] pid: 792 | pname: ttm_swap | state: 1
+[ 4208.763631] pid: 822 | pname: snapd | state: 1
+[ 4208.763633] pid: 824 | pname: atd | state: 1
+[ 4208.763634] pid: 829 | pname: cron | state: 1
+[ 4208.763635] pid: 834 | pname: systemd-logind | state: 1
+[ 4208.763637] pid: 837 | pname: acpid | state: 1
+[ 4208.763638] pid: 840 | pname: rsyslogd | state: 1
+[ 4208.763639] pid: 843 | pname: accounts-daemon | state: 1
+[ 4208.763640] pid: 845 | pname: lxcfs | state: 1
+[ 4208.763641] pid: 852 | pname: dbus-daemon | state: 1
+[ 4208.763642] pid: 890 | pname: polkitd | state: 1
+[ 4208.763644] pid: 899 | pname: mdadm | state: 1
+[ 4208.763645] pid: 1004 | pname: sshd | state: 1
+[ 4208.763646] pid: 1015 | pname: iscsid | state: 1
+[ 4208.763647] pid: 1016 | pname: iscsid | state: 1
+[ 4208.763648] pid: 1091 | pname: login | state: 1
+[ 4208.763649] pid: 1398 | pname: kworker/0:0 | state: 1
+[ 4208.763651] pid: 1457 | pname: systemd | state: 1
+[ 4208.763652] pid: 1459 | pname: (sd-pam) | state: 1
+[ 4208.763653] pid: 1460 | pname: kworker/0:1 | state: 1
+[ 4208.763654] pid: 1464 | pname: bash | state: 1
+[ 4208.763656] pid: 1487 | pname: sshd | state: 1
+[ 4208.763657] pid: 1518 | pname: sshd | state: 1
+[ 4208.763658] pid: 1519 | pname: sftp-server | state: 1
+[ 4208.763659] pid: 2539 | pname: kworker/u2:1 | state: 1
+[ 4208.763660] pid: 3232 | pname: kworker/u2:2 | state: 1
+[ 4208.763661] pid: 4250 | pname: sudo | state: 1
+[ 4208.763662] pid: 4251 | pname: insmod | state: 0
+[ 4208.763663] Module loaded.
+[ 4208.763548] Loading module...
+[ 4208.763551] pid: 1 | pname: systemd | state: 1
+[ 4208.763552] pid: 2 | pname: kthreadd | state: 1
+[ 4208.763553] pid: 3 | pname: ksoftirqd/0 | state: 1
+[ 4208.763555] pid: 5 | pname: kworker/0:0H | state: 1
+[ 4208.763556] pid: 7 | pname: rcu_sched | state: 1
+[ 4208.763557] pid: 8 | pname: rcu_bh | state: 1
+[ 4208.763558] pid: 9 | pname: migration/0 | state: 1
+[ 4208.763560] pid: 10 | pname: watchdog/0 | state: 1
+[ 4208.763561] pid: 11 | pname: kdevtmpfs | state: 1
+[ 4208.763562] pid: 12 | pname: netns | state: 1
+[ 4208.763563] pid: 13 | pname: perf | state: 1
+[ 4208.763564] pid: 14 | pname: khungtaskd | state: 1
+[ 4208.763565] pid: 15 | pname: writeback | state: 1
+[ 4208.763567] pid: 16 | pname: ksmd | state: 1
+[ 4208.763568] pid: 17 | pname: khugepaged | state: 1
+[ 4208.763569] pid: 18 | pname: crypto | state: 1
+[ 4208.763570] pid: 19 | pname: kintegrityd | state: 1
+[ 4208.763571] pid: 20 | pname: bioset | state: 1
+[ 4208.763572] pid: 21 | pname: kblockd | state: 1
+[ 4208.763574] pid: 22 | pname: ata_sff | state: 1
+[ 4208.763575] pid: 23 | pname: md | state: 1
+[ 4208.763576] pid: 24 | pname: devfreq_wq | state: 1
+[ 4208.763577] pid: 28 | pname: kswapd0 | state: 1
+[ 4208.763578] pid: 29 | pname: vmstat | state: 1
+[ 4208.763579] pid: 30 | pname: fsnotify_mark | state: 1
+[ 4208.763581] pid: 31 | pname: ecryptfs-kthrea | state: 1
+[ 4208.763582] pid: 47 | pname: kthrotld | state: 1
+[ 4208.763583] pid: 48 | pname: acpi_thermal_pm | state: 1
+[ 4208.763584] pid: 49 | pname: bioset | state: 1
+[ 4208.763585] pid: 50 | pname: bioset | state: 1
+[ 4208.763587] pid: 51 | pname: bioset | state: 1
+[ 4208.763588] pid: 52 | pname: bioset | state: 1
+[ 4208.763589] pid: 53 | pname: bioset | state: 1
+[ 4208.763590] pid: 54 | pname: bioset | state: 1
+[ 4208.763591] pid: 55 | pname: bioset | state: 1
+[ 4208.763592] pid: 56 | pname: bioset | state: 1
+[ 4208.763593] pid: 57 | pname: scsi_eh_0 | state: 1
+[ 4208.763595] pid: 58 | pname: scsi_tmf_0 | state: 1
+[ 4208.763596] pid: 59 | pname: scsi_eh_1 | state: 1
+[ 4208.763597] pid: 60 | pname: scsi_tmf_1 | state: 1
+[ 4208.763598] pid: 66 | pname: ipv6_addrconf | state: 1
+[ 4208.763599] pid: 79 | pname: deferwq | state: 1
+[ 4208.763600] pid: 80 | pname: charger_manager | state: 1
+[ 4208.763602] pid: 81 | pname: bioset | state: 1
+[ 4208.763603] pid: 134 | pname: kpsmoused | state: 1
+[ 4208.763604] pid: 147 | pname: kworker/0:1H | state: 1
+[ 4208.763605] pid: 170 | pname: scsi_eh_2 | state: 1
+[ 4208.763606] pid: 171 | pname: scsi_tmf_2 | state: 1
+[ 4208.763608] pid: 172 | pname: bioset | state: 1
+[ 4208.763609] pid: 247 | pname: raid5wq | state: 1
+[ 4208.763610] pid: 279 | pname: bioset | state: 1
+[ 4208.763611] pid: 307 | pname: jbd2/sda1-8 | state: 1
+[ 4208.763612] pid: 308 | pname: ext4-rsv-conver | state: 1
+[ 4208.763614] pid: 373 | pname: systemd-journal | state: 1
+[ 4208.763615] pid: 381 | pname: kauditd | state: 1
+[ 4208.763616] pid: 394 | pname: iscsi_eh | state: 1
+[ 4208.763617] pid: 398 | pname: ib_addr | state: 1
+[ 4208.763618] pid: 404 | pname: lvmetad | state: 1
+[ 4208.763619] pid: 416 | pname: ib_mcast | state: 1
+[ 4208.763621] pid: 417 | pname: ib_nl_sa_wq | state: 1
+[ 4208.763622] pid: 418 | pname: systemd-udevd | state: 1
+[ 4208.763623] pid: 422 | pname: ib_cm | state: 1
+[ 4208.763624] pid: 423 | pname: iw_cm_wq | state: 1
+[ 4208.763625] pid: 424 | pname: rdma_cm | state: 1
+[ 4208.763627] pid: 506 | pname: systemd-timesyn | state: 1
+[ 4208.763628] pid: 613 | pname: iprt-VBoxWQueue | state: 1
+[ 4208.763629] pid: 704 | pname: dhclient | state: 1
+[ 4208.763630] pid: 792 | pname: ttm_swap | state: 1
+[ 4208.763631] pid: 822 | pname: snapd | state: 1
+[ 4208.763633] pid: 824 | pname: atd | state: 1
+[ 4208.763634] pid: 829 | pname: cron | state: 1
+[ 4208.763635] pid: 834 | pname: systemd-logind | state: 1
+[ 4208.763637] pid: 837 | pname: acpid | state: 1
+[ 4208.763638] pid: 840 | pname: rsyslogd | state: 1
+[ 4208.763639] pid: 843 | pname: accounts-daemon | state: 1
+[ 4208.763640] pid: 845 | pname: lxcfs | state: 1
+[ 4208.763641] pid: 852 | pname: dbus-daemon | state: 1
+[ 4208.763642] pid: 890 | pname: polkitd | state: 1
+[ 4208.763644] pid: 899 | pname: mdadm | state: 1
+[ 4208.763645] pid: 1004 | pname: sshd | state: 1
+[ 4208.763646] pid: 1015 | pname: iscsid | state: 1
+[ 4208.763647] pid: 1016 | pname: iscsid | state: 1
+[ 4208.763648] pid: 1091 | pname: login | state: 1
+[ 4208.763649] pid: 1398 | pname: kworker/0:0 | state: 1
+[ 4208.763651] pid: 1457 | pname: systemd | state: 1
+[ 4208.763652] pid: 1459 | pname: (sd-pam) | state: 1
+[ 4208.763653] pid: 1460 | pname: kworker/0:1 | state: 1
+[ 4208.763654] pid: 1464 | pname: bash | state: 1
+[ 4208.763656] pid: 1487 | pname: sshd | state: 1
+[ 4208.763657] pid: 1518 | pname: sshd | state: 1
+[ 4208.763658] pid: 1519 | pname: sftp-server | state: 1
+[ 4208.763659] pid: 2539 | pname: kworker/u2:1 | state: 1
+[ 4208.763660] pid: 3232 | pname: kworker/u2:2 | state: 1
+[ 4208.763661] pid: 4250 | pname: sudo | state: 1
+[ 4208.763662] pid: 4251 | pname: insmod | state: 0
+[ 4208.763663] Module loaded.
+[ 4233.579656] Module removed.
+[ 1021.297630] q1: module license 'unspecified' taints kernel.
+[ 1021.297636] Disabling lock debugging due to kernel taint
+[ 1021.297656] q1: module verification failed: signature and/or required key missing - tainting kernel
+[ 1021.298501] Loading module...
+[ 1021.298503] pid: 1 | pname: systemd
+[ 1021.298504] pid: 2 | pname: kthreadd
+[ 1021.298505] pid: 3 | pname: ksoftirqd/0
+[ 1021.298507] pid: 5 | pname: kworker/0:0H
+[ 1021.298508] pid: 7 | pname: rcu_sched
+[ 1021.298509] pid: 8 | pname: rcu_bh
+[ 1021.298510] pid: 9 | pname: migration/0
+[ 1021.298511] pid: 10 | pname: watchdog/0
+[ 1021.298512] pid: 11 | pname: kdevtmpfs
+[ 1021.298513] pid: 12 | pname: netns
+[ 1021.298514] pid: 13 | pname: perf
+[ 1021.298515] pid: 14 | pname: khungtaskd
+[ 1021.298517] pid: 15 | pname: writeback
+[ 1021.298518] pid: 16 | pname: ksmd
+[ 1021.298519] pid: 17 | pname: khugepaged
+[ 1021.298520] pid: 18 | pname: crypto
+[ 1021.298521] pid: 19 | pname: kintegrityd
+[ 1021.298522] pid: 20 | pname: bioset
+[ 1021.298523] pid: 21 | pname: kblockd
+[ 1021.298524] pid: 22 | pname: ata_sff
+[ 1021.298525] pid: 23 | pname: md
+[ 1021.298526] pid: 24 | pname: devfreq_wq
+[ 1021.298528] pid: 28 | pname: kswapd0
+[ 1021.298529] pid: 29 | pname: vmstat
+[ 1021.298530] pid: 30 | pname: fsnotify_mark
+[ 1021.298531] pid: 31 | pname: ecryptfs-kthrea
+[ 1021.298532] pid: 47 | pname: kthrotld
+[ 1021.298533] pid: 48 | pname: acpi_thermal_pm
+[ 1021.298535] pid: 49 | pname: bioset
+[ 1021.298536] pid: 50 | pname: bioset
+[ 1021.298537] pid: 51 | pname: bioset
+[ 1021.298538] pid: 52 | pname: bioset
+[ 1021.298539] pid: 53 | pname: bioset
+[ 1021.298540] pid: 54 | pname: bioset
+[ 1021.298541] pid: 55 | pname: bioset
+[ 1021.298542] pid: 56 | pname: bioset
+[ 1021.298543] pid: 57 | pname: scsi_eh_0
+[ 1021.298545] pid: 58 | pname: scsi_tmf_0
+[ 1021.298546] pid: 59 | pname: scsi_eh_1
+[ 1021.298547] pid: 60 | pname: scsi_tmf_1
+[ 1021.298548] pid: 62 | pname: kworker/u2:3
+[ 1021.298549] pid: 66 | pname: ipv6_addrconf
+[ 1021.298550] pid: 79 | pname: deferwq
+[ 1021.298551] pid: 80 | pname: charger_manager
+[ 1021.298552] pid: 81 | pname: bioset
+[ 1021.298553] pid: 120 | pname: kworker/0:2
+[ 1021.298555] pid: 124 | pname: kpsmoused
+[ 1021.298556] pid: 136 | pname: kworker/0:1H
+[ 1021.298557] pid: 160 | pname: scsi_eh_2
+[ 1021.298558] pid: 161 | pname: scsi_tmf_2
+[ 1021.298559] pid: 162 | pname: bioset
+[ 1021.298560] pid: 236 | pname: raid5wq
+[ 1021.298562] pid: 268 | pname: bioset
+[ 1021.298563] pid: 296 | pname: jbd2/sda1-8
+[ 1021.298564] pid: 297 | pname: ext4-rsv-conver
+[ 1021.298565] pid: 346 | pname: kworker/0:4
+[ 1021.298566] pid: 367 | pname: systemd-journal
+[ 1021.298567] pid: 371 | pname: kauditd
+[ 1021.298568] pid: 376 | pname: iscsi_eh
+[ 1021.298569] pid: 388 | pname: ib_addr
+[ 1021.298570] pid: 395 | pname: lvmetad
+[ 1021.298572] pid: 404 | pname: ib_mcast
+[ 1021.298573] pid: 405 | pname: ib_nl_sa_wq
+[ 1021.298574] pid: 408 | pname: ib_cm
+[ 1021.298575] pid: 409 | pname: iw_cm_wq
+[ 1021.298576] pid: 410 | pname: systemd-udevd
+[ 1021.298577] pid: 414 | pname: rdma_cm
+[ 1021.298578] pid: 480 | pname: iprt-VBoxWQueue
+[ 1021.298579] pid: 530 | pname: systemd-timesyn
+[ 1021.298580] pid: 597 | pname: ttm_swap
+[ 1021.298581] pid: 745 | pname: dhclient
+[ 1021.298583] pid: 827 | pname: lxcfs
+[ 1021.298584] pid: 828 | pname: systemd-logind
+[ 1021.298585] pid: 830 | pname: dbus-daemon
+[ 1021.298586] pid: 852 | pname: snapd
+[ 1021.298587] pid: 854 | pname: atd
+[ 1021.298588] pid: 857 | pname: rsyslogd
+[ 1021.298589] pid: 862 | pname: cron
+[ 1021.298590] pid: 864 | pname: acpid
+[ 1021.298591] pid: 867 | pname: accounts-daemon
+[ 1021.298593] pid: 884 | pname: mdadm
+[ 1021.298594] pid: 889 | pname: polkitd
+[ 1021.298595] pid: 997 | pname: sshd
+[ 1021.298596] pid: 1010 | pname: iscsid
+[ 1021.298597] pid: 1011 | pname: iscsid
+[ 1021.298598] pid: 1073 | pname: login
+[ 1021.298599] pid: 1134 | pname: systemd
+[ 1021.298600] pid: 1136 | pname: (sd-pam)
+[ 1021.298601] pid: 1142 | pname: bash
+[ 1021.298603] pid: 1156 | pname: kworker/u2:1
+[ 1021.298604] pid: 1157 | pname: sshd
+[ 1021.298605] pid: 1188 | pname: sshd
+[ 1021.298606] pid: 1189 | pname: sftp-server
+[ 1021.298607] pid: 1190 | pname: kworker/u2:0
+[ 1021.298608] pid: 1194 | pname: kworker/0:0
+[ 1021.298609] pid: 1554 | pname: sudo
+[ 1021.298610] pid: 1555 | pname: insmod
+[ 1021.298611] Module loaded.
+[ 1021.297630] q1: module license 'unspecified' taints kernel.
+[ 1021.297636] Disabling lock debugging due to kernel taint
+[ 1021.297656] q1: module verification failed: signature and/or required key missing - tainting kernel
+[ 1021.298501] Loading module...
+[ 1021.298503] pid: 1 | pname: systemd
+[ 1021.298504] pid: 2 | pname: kthreadd
+[ 1021.298505] pid: 3 | pname: ksoftirqd/0
+[ 1021.298507] pid: 5 | pname: kworker/0:0H
+[ 1021.298508] pid: 7 | pname: rcu_sched
+[ 1021.298509] pid: 8 | pname: rcu_bh
+[ 1021.298510] pid: 9 | pname: migration/0
+[ 1021.298511] pid: 10 | pname: watchdog/0
+[ 1021.298512] pid: 11 | pname: kdevtmpfs
+[ 1021.298513] pid: 12 | pname: netns
+[ 1021.298514] pid: 13 | pname: perf
+[ 1021.298515] pid: 14 | pname: khungtaskd
+[ 1021.298517] pid: 15 | pname: writeback
+[ 1021.298518] pid: 16 | pname: ksmd
+[ 1021.298519] pid: 17 | pname: khugepaged
+[ 1021.298520] pid: 18 | pname: crypto
+[ 1021.298521] pid: 19 | pname: kintegrityd
+[ 1021.298522] pid: 20 | pname: bioset
+[ 1021.298523] pid: 21 | pname: kblockd
+[ 1021.298524] pid: 22 | pname: ata_sff
+[ 1021.298525] pid: 23 | pname: md
+[ 1021.298526] pid: 24 | pname: devfreq_wq
+[ 1021.298528] pid: 28 | pname: kswapd0
+[ 1021.298529] pid: 29 | pname: vmstat
+[ 1021.298530] pid: 30 | pname: fsnotify_mark
+[ 1021.298531] pid: 31 | pname: ecryptfs-kthrea
+[ 1021.298532] pid: 47 | pname: kthrotld
+[ 1021.298533] pid: 48 | pname: acpi_thermal_pm
+[ 1021.298535] pid: 49 | pname: bioset
+[ 1021.298536] pid: 50 | pname: bioset
+[ 1021.298537] pid: 51 | pname: bioset
+[ 1021.298538] pid: 52 | pname: bioset
+[ 1021.298539] pid: 53 | pname: bioset
+[ 1021.298540] pid: 54 | pname: bioset
+[ 1021.298541] pid: 55 | pname: bioset
+[ 1021.298542] pid: 56 | pname: bioset
+[ 1021.298543] pid: 57 | pname: scsi_eh_0
+[ 1021.298545] pid: 58 | pname: scsi_tmf_0
+[ 1021.298546] pid: 59 | pname: scsi_eh_1
+[ 1021.298547] pid: 60 | pname: scsi_tmf_1
+[ 1021.298548] pid: 62 | pname: kworker/u2:3
+[ 1021.298549] pid: 66 | pname: ipv6_addrconf
+[ 1021.298550] pid: 79 | pname: deferwq
+[ 1021.298551] pid: 80 | pname: charger_manager
+[ 1021.298552] pid: 81 | pname: bioset
+[ 1021.298553] pid: 120 | pname: kworker/0:2
+[ 1021.298555] pid: 124 | pname: kpsmoused
+[ 1021.298556] pid: 136 | pname: kworker/0:1H
+[ 1021.298557] pid: 160 | pname: scsi_eh_2
+[ 1021.298558] pid: 161 | pname: scsi_tmf_2
+[ 1021.298559] pid: 162 | pname: bioset
+[ 1021.298560] pid: 236 | pname: raid5wq
+[ 1021.298562] pid: 268 | pname: bioset
+[ 1021.298563] pid: 296 | pname: jbd2/sda1-8
+[ 1021.298564] pid: 297 | pname: ext4-rsv-conver
+[ 1021.298565] pid: 346 | pname: kworker/0:4
+[ 1021.298566] pid: 367 | pname: systemd-journal
+[ 1021.298567] pid: 371 | pname: kauditd
+[ 1021.298568] pid: 376 | pname: iscsi_eh
+[ 1021.298569] pid: 388 | pname: ib_addr
+[ 1021.298570] pid: 395 | pname: lvmetad
+[ 1021.298572] pid: 404 | pname: ib_mcast
+[ 1021.298573] pid: 405 | pname: ib_nl_sa_wq
+[ 1021.298574] pid: 408 | pname: ib_cm
+[ 1021.298575] pid: 409 | pname: iw_cm_wq
+[ 1021.298576] pid: 410 | pname: systemd-udevd
+[ 1021.298577] pid: 414 | pname: rdma_cm
+[ 1021.298578] pid: 480 | pname: iprt-VBoxWQueue
+[ 1021.298579] pid: 530 | pname: systemd-timesyn
+[ 1021.298580] pid: 597 | pname: ttm_swap
+[ 1021.298581] pid: 745 | pname: dhclient
+[ 1021.298583] pid: 827 | pname: lxcfs
+[ 1021.298584] pid: 828 | pname: systemd-logind
+[ 1021.298585] pid: 830 | pname: dbus-daemon
+[ 1021.298586] pid: 852 | pname: snapd
+[ 1021.298587] pid: 854 | pname: atd
+[ 1021.298588] pid: 857 | pname: rsyslogd
+[ 1021.298589] pid: 862 | pname: cron
+[ 1021.298590] pid: 864 | pname: acpid
+[ 1021.298591] pid: 867 | pname: accounts-daemon
+[ 1021.298593] pid: 884 | pname: mdadm
+[ 1021.298594] pid: 889 | pname: polkitd
+[ 1021.298595] pid: 997 | pname: sshd
+[ 1021.298596] pid: 1010 | pname: iscsid
+[ 1021.298597] pid: 1011 | pname: iscsid
+[ 1021.298598] pid: 1073 | pname: login
+[ 1021.298599] pid: 1134 | pname: systemd
+[ 1021.298600] pid: 1136 | pname: (sd-pam)
+[ 1021.298601] pid: 1142 | pname: bash
+[ 1021.298603] pid: 1156 | pname: kworker/u2:1
+[ 1021.298604] pid: 1157 | pname: sshd
+[ 1021.298605] pid: 1188 | pname: sshd
+[ 1021.298606] pid: 1189 | pname: sftp-server
+[ 1021.298607] pid: 1190 | pname: kworker/u2:0
+[ 1021.298608] pid: 1194 | pname: kworker/0:0
+[ 1021.298609] pid: 1554 | pname: sudo
+[ 1021.298610] pid: 1555 | pname: insmod
+[ 1021.298611] Module loaded.
+[ 1038.678223] Module removed.

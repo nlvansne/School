@@ -1,0 +1,11 @@
+C:\Users\Nathan VanSnepson\Desktop\Classes\CS311\repos\Assignment10\Assignment10\bin\Debug\Assignment10.dll
+C:\Users\Nathan VanSnepson\Desktop\Classes\CS311\repos\Assignment10\Assignment10\bin\Debug\Assignment10.pdb
+C:\Users\Nathan VanSnepson\Desktop\Classes\CS311\repos\Assignment10\Assignment10\bin\Debug\Assignment10.xml
+C:\Users\Nathan VanSnepson\Desktop\Classes\CS311\repos\Assignment10\Assignment10\obj\Debug\Assignment10.vbproj.AssemblyReference.cache
+C:\Users\Nathan VanSnepson\Desktop\Classes\CS311\repos\Assignment10\Assignment10\obj\Debug\Assignment10.Resources.resources
+C:\Users\Nathan VanSnepson\Desktop\Classes\CS311\repos\Assignment10\Assignment10\obj\Debug\Assignment10.myClock.resources
+C:\Users\Nathan VanSnepson\Desktop\Classes\CS311\repos\Assignment10\Assignment10\obj\Debug\Assignment10.vbproj.GenerateResource.cache
+C:\Users\Nathan VanSnepson\Desktop\Classes\CS311\repos\Assignment10\Assignment10\obj\Debug\Assignment10.vbproj.CoreCompileInputs.cache
+C:\Users\Nathan VanSnepson\Desktop\Classes\CS311\repos\Assignment10\Assignment10\obj\Debug\Assignment10.dll
+C:\Users\Nathan VanSnepson\Desktop\Classes\CS311\repos\Assignment10\Assignment10\obj\Debug\Assignment10.xml
+C:\Users\Nathan VanSnepson\Desktop\Classes\CS311\repos\Assignment10\Assignment10\obj\Debug\Assignment10.pdb

@@ -1,0 +1,2 @@
+Nate;1;48;10;False
+Cody;2;330;30;True

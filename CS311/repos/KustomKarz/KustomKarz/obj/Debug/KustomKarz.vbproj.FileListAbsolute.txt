@@ -1,0 +1,13 @@
+C:\Users\Nathan VanSnepson\Desktop\CS311\repos\KustomKarz\KustomKarz\bin\Debug\KustomKarz.exe.config
+C:\Users\Nathan VanSnepson\Desktop\CS311\repos\KustomKarz\KustomKarz\bin\Debug\KustomKarz.exe
+C:\Users\Nathan VanSnepson\Desktop\CS311\repos\KustomKarz\KustomKarz\bin\Debug\KustomKarz.pdb
+C:\Users\Nathan VanSnepson\Desktop\CS311\repos\KustomKarz\KustomKarz\bin\Debug\KustomKarz.xml
+C:\Users\Nathan VanSnepson\Desktop\CS311\repos\KustomKarz\KustomKarz\obj\Debug\KustomKarz.vbproj.AssemblyReference.cache
+C:\Users\Nathan VanSnepson\Desktop\CS311\repos\KustomKarz\KustomKarz\obj\Debug\KustomKarz.KustomKarzForm.resources
+C:\Users\Nathan VanSnepson\Desktop\CS311\repos\KustomKarz\KustomKarz\obj\Debug\KustomKarz.Resources.resources
+C:\Users\Nathan VanSnepson\Desktop\CS311\repos\KustomKarz\KustomKarz\obj\Debug\KustomKarz.vbproj.GenerateResource.cache
+C:\Users\Nathan VanSnepson\Desktop\CS311\repos\KustomKarz\KustomKarz\obj\Debug\KustomKarz.vbproj.CoreCompileInputs.cache
+C:\Users\Nathan VanSnepson\Desktop\CS311\repos\KustomKarz\KustomKarz\obj\Debug\KustomKarz.exe
+C:\Users\Nathan VanSnepson\Desktop\CS311\repos\KustomKarz\KustomKarz\obj\Debug\KustomKarz.xml
+C:\Users\Nathan VanSnepson\Desktop\CS311\repos\KustomKarz\KustomKarz\obj\Debug\KustomKarz.pdb
+C:\Users\Nathan VanSnepson\Desktop\CS311\repos\KustomKarz\KustomKarz\obj\Debug\KustomKarz.KustomKarzInvoiceForm.resources

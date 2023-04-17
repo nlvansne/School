@@ -1,0 +1,154 @@
+#include <stdio.h>
+#include <sys/mman.h> /*For mmap() function*/
+#include <string.h> /*For memcpy function*/
+#include <fcntl.h> /*For file descriptors*/
+#include <stdlib.h> /*For file descriptors*/ 
+#include <sys/stat.h>
+
+#define CHAR_SIZE 1
+#define BUFF_SIZE 10
+#define PAGE_NUMBER_MASK 255
+#define OFFSET_MASK 255
+#define PAGES 256
+#define OFFSET_BITS 8 
+#define PAGE_SIZE 256
+#define FRAME_SIZE 256
+#define ADD_COUNT 1000  //Number of inputs
+
+//Page table and page frame
+int page_table[PAGES];
+int page_Frame[PAGES];
+int nextAvailableFrame = 0;
+
+char reader[FRAME_SIZE];
+int pageFaults = 0;
+int tlbHits = 0;
+
+//Input Files
+FILE* adrFile;
+
+signed char* backingStoreptr;
+struct stat sb;
+
+#define PHYSICAL_MEM_BYTES 65536
+int physical_Memory[PHYSICAL_MEM_BYTES];
+signed char* physicalAdd[ADD_COUNT];
+unsigned int frame_number;
+
+//TLB Structure
+struct TLBentry {
+	int page_number;
+	int frame;
+} tlb[PAGES];
+
+int tlbNum = 0;
+int itemsInTLB = 0; 
+
+//For frame if there is a fault
+char frame[FRAME_SIZE];
+
+
+int main(int argc, char* argv[]) {
+
+	if (argc < 3) {
+		printf("Include file names in args!\n");
+		return(1);
+	}
+
+	//Read in logical addresses
+	char buff[BUFF_SIZE];
+	int i;
+	int page_counter = 0;
+
+	//Initialize page table to be all -1
+	for (int i = 0; i < PAGES; i++) {
+		page_table[i] = -1;
+	}
+
+
+	//Open file for virtual addresses
+	adrFile = fopen(argv[1], "r");
+
+	for (i = 0; i < ADD_COUNT; i++) {
+		fgets(buff, BUFF_SIZE, adrFile);
+
+
+		//Compute page_number and offset
+		int logical_adr = atoi(buff);
+		int offset = logical_adr & OFFSET_MASK;;
+		int page_number = (logical_adr >> OFFSET_BITS) & PAGE_NUMBER_MASK;
+
+
+
+		if (page_table[page_number] == -1) {
+
+
+
+
+			page_table[page_number] = page_counter;
+
+			page_counter++;
+
+			//Counts the number of page faults
+			pageFaults++;
+
+			//printf("%s\n", buffer);
+		}
+
+		frame_number = page_table[page_number];
+		int physical_Add = (frame_number << OFFSET_BITS) | offset;
+
+		printf("Virtual Address: %d Physical address: %d Value: \n", logical_adr, physical_Add);
+	}
+
+	printf("Number of Translated Addresses = %d\n", ADD_COUNT);
+	printf("Page Faults = %d\n", pageFaults);
+	printf("TLB Hits = %d\n", tlbHits);
+
+
+	munmap(backingStoreptr, PHYSICAL_MEM_BYTES);
+
+	//close files 
+	fclose(adrFile);
+
+
+	return 0;
+}
+
+int addToTLB() {
+	return -1;
+}
+
+
+int searchTLB(int page) {
+	int k = 0;
+	for (k = 0; k < itemsInTLB; k++) {
+		if (tlb[k].page_number == page) {
+			tlbHits++;
+		}
+	}
+
+	return -1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

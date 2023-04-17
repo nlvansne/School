@@ -1,0 +1,13 @@
+C:\Users\Nathan VanSnepson\Desktop\CS311\repos\ChezSouSad\ChezSouSad\bin\Debug\ChezSouSad.exe.config
+C:\Users\Nathan VanSnepson\Desktop\CS311\repos\ChezSouSad\ChezSouSad\bin\Debug\ChezSouSad.exe
+C:\Users\Nathan VanSnepson\Desktop\CS311\repos\ChezSouSad\ChezSouSad\bin\Debug\ChezSouSad.pdb
+C:\Users\Nathan VanSnepson\Desktop\CS311\repos\ChezSouSad\ChezSouSad\bin\Debug\ChezSouSad.xml
+C:\Users\Nathan VanSnepson\Desktop\CS311\repos\ChezSouSad\ChezSouSad\obj\Debug\ChezSouSad.vbproj.AssemblyReference.cache
+C:\Users\Nathan VanSnepson\Desktop\CS311\repos\ChezSouSad\ChezSouSad\obj\Debug\ChezSouSad.vbproj.SuggestedBindingRedirects.cache
+C:\Users\Nathan VanSnepson\Desktop\CS311\repos\ChezSouSad\ChezSouSad\obj\Debug\ChezSouSad.Form1.resources
+C:\Users\Nathan VanSnepson\Desktop\CS311\repos\ChezSouSad\ChezSouSad\obj\Debug\ChezSouSad.Resources.resources
+C:\Users\Nathan VanSnepson\Desktop\CS311\repos\ChezSouSad\ChezSouSad\obj\Debug\ChezSouSad.vbproj.GenerateResource.cache
+C:\Users\Nathan VanSnepson\Desktop\CS311\repos\ChezSouSad\ChezSouSad\obj\Debug\ChezSouSad.vbproj.CoreCompileInputs.cache
+C:\Users\Nathan VanSnepson\Desktop\CS311\repos\ChezSouSad\ChezSouSad\obj\Debug\ChezSouSad.exe
+C:\Users\Nathan VanSnepson\Desktop\CS311\repos\ChezSouSad\ChezSouSad\obj\Debug\ChezSouSad.xml
+C:\Users\Nathan VanSnepson\Desktop\CS311\repos\ChezSouSad\ChezSouSad\obj\Debug\ChezSouSad.pdb

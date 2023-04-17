@@ -1,0 +1,12 @@
+C:\Users\Nathan VanSnepson\Desktop\Classes\CS311\repos\Assignment8\Assignment8\bin\Debug\Assignment8.exe.config
+C:\Users\Nathan VanSnepson\Desktop\Classes\CS311\repos\Assignment8\Assignment8\bin\Debug\Assignment8.exe
+C:\Users\Nathan VanSnepson\Desktop\Classes\CS311\repos\Assignment8\Assignment8\bin\Debug\Assignment8.pdb
+C:\Users\Nathan VanSnepson\Desktop\Classes\CS311\repos\Assignment8\Assignment8\bin\Debug\Assignment8.xml
+C:\Users\Nathan VanSnepson\Desktop\Classes\CS311\repos\Assignment8\Assignment8\obj\Debug\Assignment8.vbproj.AssemblyReference.cache
+C:\Users\Nathan VanSnepson\Desktop\Classes\CS311\repos\Assignment8\Assignment8\obj\Debug\Assignment8.Form1.resources
+C:\Users\Nathan VanSnepson\Desktop\Classes\CS311\repos\Assignment8\Assignment8\obj\Debug\Assignment8.Resources.resources
+C:\Users\Nathan VanSnepson\Desktop\Classes\CS311\repos\Assignment8\Assignment8\obj\Debug\Assignment8.vbproj.GenerateResource.cache
+C:\Users\Nathan VanSnepson\Desktop\Classes\CS311\repos\Assignment8\Assignment8\obj\Debug\Assignment8.vbproj.CoreCompileInputs.cache
+C:\Users\Nathan VanSnepson\Desktop\Classes\CS311\repos\Assignment8\Assignment8\obj\Debug\Assignment8.exe
+C:\Users\Nathan VanSnepson\Desktop\Classes\CS311\repos\Assignment8\Assignment8\obj\Debug\Assignment8.xml
+C:\Users\Nathan VanSnepson\Desktop\Classes\CS311\repos\Assignment8\Assignment8\obj\Debug\Assignment8.pdb

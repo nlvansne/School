@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>C - File I/O</title>
+<meta charset="utf-8">
+<meta name="description" content="C - File I/O,  The last chapter explained the standard input and output devices handled by C programming language. This chapter cover how C programmers can create, open, close"/>
+<meta name="keywords" content="C, C++, Python, Java, HTML, CSS, JavaScript, SQL, PHP, jQuery, XML, DOM, Bootstrap, Tutorials, Articles, Programming, training, learning, quiz, preferences, examples, code"/>
+<link rel="canonical" href="https://www.tutorialspoint.com/cprogramming/c_file_io.htm" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+<link rel="stylesheet" href="/themes/css/style-min-v1.css?v=5.3">
+<script src="/themes/js/prism-core.min.js"></script>
+<script src="/themes/js/prism-autoloader.min.js"></script>
+<script src="/themes/js/script-min-v1.js?v=5.3"></script>
+<script>
+function printPage() { window.print(); }
+function readCookie(name) {
+     var nameEQ = name + "=";
+     var ca = document.cookie.split(';');
+     for (var i = 0; i < ca.length; i++) {
+          var c = ca[i];
+          while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+          if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+     }
+     return null;
+}
+</script>
+<script id="adp1" data-cfasync="false">(function(w, d) { var s = d.createElement('script'); s.src = '//cdn.adpushup.com/40046/adpushup.js'; s.type = 'text/javascript'; s.async = true; (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s); })(window, document);</script>
+<script id="adp2" data-cfasync="false">(function(w, d) {var cval = readCookie('subscription_purchased');if(cval == '1'){ return; } var s = d.createElement('script'); s.src = '//delivery.adrecover.com/18107/adRecover.js'; s.type = 'text/javascript'; s.async = true; (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s); })(window, document);</script>
+<style>
+.butnn-save a{color:#fff;} .notes_msg{color:green; margin-left:20px; margin-top:15px;}
+.right-menu .mui-btn {
+    background-color:#c96a14;
+}
+a.demo {
+    background:#c96a14;
+}
+li.heading {
+    background:#c96a14;
+}
+.course-box{background:#c96a14}
+.home-intro-sub p{color:#c96a14}
+a.demo{
+   top: 12px;
+   float:right;
+}
+.prettyprint{
+   width: 99%;
+}
+.site-message img {
+   width:100%;
+}
+@media (max-width:544px){
+   .site-message img {
+       width: 200%;
+       position: relative;
+       left: -50%;
+   }
+}
+</style>
+</head>
+<body>
+<header id="header">
+<div class="site-message">
+  <a href="https://www.tutorialspoint.com/latest/prime-packs">
+  <img src="/images/top-banner.jpg?v=101" alt="Video Courses Sale"/>
+  </a>
+</div>
+<!-- pop-up -->
+<!-- pop-up -->
+<div class="pop-modal overlay-pop popdiv">
+<div class="modal-window small">
+<span class="close" title="close">×</span>
+<div class="pop-content">
+</div>
+<span class="msg" ></span>
+</div>
+</div>
+<div class="wrap_loader">
+<div class="imgLoader"></div>
+</div>
+<input type="hidden" id="vu" name="vu" value="" />
+<!-- pop-up -->
+
+<!-- Top sub-menu Starts Here -->
+<div class="mui-appbar mui-container-fulid top-menu">
+<div class="mui-container">
+<div class="top-menu-item home">
+<a href="https://www.tutorialspoint.com/index.htm" target="_blank" title="TutorialsPoint - Home"><i class="fal fa-home"></i> <span>Home</span></a>
+</div>
+<div class="top-menu-item qa">
+<a href="https://www.tutorialspoint.com/about/about_careers.htm" target="_blank" title="Job @ Tutorials Point"><i class="fa fa-suitcase"></i> <span>Jobs</span></a>
+</div>
+<div class="top-menu-item tools">
+<a href="https://www.tutorialspoint.com/online_dev_tools.htm" target="_blank" title="Tools - Online Development and Testing Tools"><i class="fal fa-cogs"></i> <span>Tools</span></a>
+</div>
+<div class="top-menu-item coding-ground">
+<a href="https://www.tutorialspoint.com/codingground.htm" target="_blank" title="Coding Ground - Free Online IDE and Terminal"><i class="fal fa-code"></i> <span>Coding Ground </span></a> 
+</div>
+<div class="top-menu-item current-affairs">
+<a href="https://www.tutorialspoint.com/current_affairs.htm" target="_blank" title="Daily Current Affairs"><i class="fal fa-layer-plus"></i> <span>Current Affairs</span></a>
+</div>
+<div class="top-menu-item upsc-notes">
+<a href="https://www.tutorialspoint.com/upsc_ias_exams.htm" target="_blank" title="UPSC IAS Exams Notes - TutorialsPoint"><i class="fal fa-user-tie"></i> <span>UPSC Notes</span></a>
+</div>      
+<div class="top-menu-item articles">
+<a href="https://www.tutorialspoint.com/tutor_connect/index.php" target="_blank" title="Top Online Tutors - Tutor Connect"><i class="fal fa-user"></i> <span>Online Tutors</span></a>
+</div>
+<div class="top-menu-item whiteboard">
+<a href="https://www.tutorialspoint.com/whiteboard.htm" target="_blank" title="Free Online Whiteboard"><i class="fal fa-chalkboard"></i> <span>Whiteboard</span></a>
+</div>
+<div class="top-menu-item articles">
+<a href="https://www.tutorix.com" target="_blank" title="Tutorx - The Best Learning App" rel="nofollow"><i class="fal fa-video"></i> <span>Tutorix</span></a> 
+</div>
+<div class="top-menu-item net-meeting">
+<a href="https://www.tutorialspoint.com/market/login.asp?v=4.00" target="_blank" title="Login TutorialsPoint"><i class="fal fa-sign-in-alt"></i> <span>Login</span></a> 
+</div>      
+<div class="social-menu-item">
+<a href="https://www.facebook.com/tutorialspointindia" target="_blank" rel="nofollow" data-placement="bottom" title="tutorialspoint @ Facebook"><i class="fab fa-facebook-f"></i></a> 
+<a href="https://www.twitter.com/tutorialspoint" target="_blank" rel="nofollow" data-placement="bottom" title="tutorialspoint @ Twitter"><i class="fab fa-twitter"></i></a>
+<a href="https://www.linkedin.com/company/tutorialspoint" target="_blank" rel="nofollow" data-placement="bottom" title="tutorialspoint @ Linkedin"><i class="fab fa-linkedin-in"></i></a>
+<a href="https://www.youtube.com/channel/UCVLbzhxVTiTLiVKeGV7WEBg" target="_blank" rel="nofollow" data-placement="bottom" title="tutorialspoint YouTube"><i class="fab fa-youtube"></i></a>
+</div>        
+</div>
+</div>
+<!-- Top sub-menu Ends Here -->
+<!-- Top main-menu Starts Here -->
+<div class="mui-appbar mui-container-fulid mui--appbar-line-height mui--z1" id="logo-menu">
+<div class="mui-container">
+<div class="left-menu">
+<a href="https://www.tutorialspoint.com/index.htm" title="Tutorialspoint">
+<img class="tp-logo" alt="tutorialspoint" src="/cprogramming/images/logo.png">
+</a>
+<div class="mui-dropdown">
+<a class="mui-btn mui-btn--primary categories" data-mui-toggle="dropdown"><i class="fa fa-th-large"></i> 
+<span>Categories <span class="mui-caret"></span></span></a>            
+<ul class="mui-dropdown__menu cat-menu">
+<li>
+<ul>
+<li><a href="/academic_tutorials.htm"><i class="fa fa-caret-right"></i> Academic Tutorials</a></li>
+<li><a href="/big_data_tutorials.htm"><i class="fa fa-caret-right"></i> Big Data &amp; Analytics </a></li>
+<li><a href="/computer_programming_tutorials.htm"><i class="fa fa-caret-right"></i> Computer Programming </a></li>
+<li><a href="/computer_science_tutorials.htm"><i class="fa fa-caret-right"></i> Computer Science </a></li>
+<li><a href="/database_tutorials.htm"><i class="fa fa-caret-right"></i> Databases </a></li>
+<li><a href="/devops_tutorials.htm"><i class="fa fa-caret-right"></i> DevOps </a></li>
+<li><a href="/digital_marketing_tutorials.htm"><i class="fa fa-caret-right"></i> Digital Marketing </a></li>
+<li><a href="/engineering_tutorials.htm"><i class="fa fa-caret-right"></i> Engineering Tutorials </a></li>
+<li><a href="/upsc_ias_exams.htm"><i class="fa fa-caret-right"></i> Exams Syllabus </a></li>
+<li><a href="/famous_monuments.htm"><i class="fa fa-caret-right"></i> Famous Monuments </a></li>
+<li><a href="/gate_exams_tutorials.htm"><i class="fa fa-caret-right"></i> GATE Exams Tutorials</a></li>
+<li><a href="/latest_technologies.htm"><i class="fa fa-caret-right"></i> Latest Technologies </a></li>
+<li><a href="/machine_learning_tutorials.htm"><i class="fa fa-caret-right"></i> Machine Learning </a></li>
+<li><a href="/mainframe_tutorials.htm"><i class="fa fa-caret-right"></i> Mainframe Development </a></li>
+<li><a href="/management_tutorials.htm"><i class="fa fa-caret-right"></i> Management Tutorials </a></li>
+<li><a href="/maths_tutorials.htm"><i class="fa fa-caret-right"></i> Mathematics Tutorials</a></li>
+<li><a href="/microsoft_technologies_tutorials.htm"><i class="fa fa-caret-right"></i> Microsoft Technologies </a></li>
+<li><a href="/misc_tutorials.htm"><i class="fa fa-caret-right"></i> Misc tutorials </a></li>
+<li><a href="/mobile_development_tutorials.htm"><i class="fa fa-caret-right"></i> Mobile Development </a></li>
+<li><a href="/java_technology_tutorials.htm"><i class="fa fa-caret-right"></i> Java Technologies </a></li>
+<li><a href="/python_technologies_tutorials.htm"><i class="fa fa-caret-right"></i> Python Technologies </a></li>
+<li><a href="/sap_tutorials.htm"><i class="fa fa-caret-right"></i> SAP Tutorials </a></li>
+<li><a href="/scripting_lnaguage_tutorials.htm"><i class="fa fa-caret-right"></i>Programming Scripts </a></li>
+<li><a href="/selected_reading.htm"><i class="fa fa-caret-right"></i> Selected Reading </a></li>
+<li><a href="/software_quality_tutorials.htm"><i class="fa fa-caret-right"></i> Software Quality </a></li>
+<li><a href="/soft_skill_tutorials.htm"><i class="fa fa-caret-right"></i> Soft Skills </a></li>
+<li><a href="/telecom_tutorials.htm"><i class="fa fa-caret-right"></i> Telecom Tutorials </a></li>
+<li><a href="/upsc_ias_exams.htm"><i class="fa fa-caret-right"></i> UPSC IAS Exams </a></li>
+<li><a href="/web_development_tutorials.htm"><i class="fa fa-caret-right"></i> Web Development </a></li>
+<li><a href="/sports_tutorials.htm"><i class="fa fa-caret-right"></i> Sports Tutorials </a></li>
+<li><a href="/xml_technologies_tutorials.htm"><i class="fa fa-caret-right"></i> XML Technologies </a></li>
+<li><a href="/multi_language_tutorials.htm"><i class="fa fa-caret-right"></i> Multi-Language</a></li>
+<li><a href="/questions_and_answers.htm"><i class="fa fa-caret-right"></i> Interview Questions</a></li>
+</ul>
+</li>
+</ul>
+<div class="clear"></div>
+</div> 
+</div>
+<div class="right-menu">
+<div class="toc-toggle">
+<a href="javascript:void(0);"><i class="fa fa-bars"></i></a>
+</div>
+<div class="mobile-search-btn">
+<a href="https://www.tutorialspoint.com/index.htm"><i class="fal fa-search"></i></a>
+</div>
+<div class="search-box-wrap">
+	<div class="search-box" style="">
+		<div>
+			<input class="input" type="text" id="search-strings" name="key" placeholder="Search latest courses, ebooks and prime packs..." autocomplete="off">
+			<button id="btnSearch"><i class="fa fa-search" title="Search"></i></button>
+		</div>
+	</div>		
+	<div class="search-box" id="search-results"></div>
+	<div class="clear"></div>
+	<script>
+		$('#search-strings').keyup(function () {
+			var keyword = $('#search-strings').val();
+			if (keyword != "" && keyword.length > 2) {
+				$.ajax({
+					url:"https://search.tutorialspoint.com/market_urls_suggestion.php",
+					method: "POST",
+               type: 'POST',
+					dataType: "json",
+               cache:false,
+					data: {
+						'keyword': keyword
+					},
+					error: function (err) {
+						console.log ( err );
+					},
+					success: function (data) {
+						if (data.length > 0) {
+					//var str = '<div class="search_title arrow_search">Search Results</div><ul>';
+					var str = '<div class="search-overlay"><ul>';
+					data.forEach((item) => {
+					   var iconStr = '<i class="fa fa-play-circle"></i>';
+					   if(item.type=='E'){
+						  iconStr = '<i class="fa fa-file-pdf"></i>';
+					   }
+					   if(item.type=='B'){
+						  iconStr = '<i class="fa fa-cubes"></i>';
+					   }
+					   if(item.type=='A' || item.type=='I' || item.type=='P'){ // profile/author/instructor
+						  iconStr = '<i class="fa fa-user"></i>';
+					   }
+					   str = str + '<a href="'+item.url+'" target="_blank"><li class="clsHeadQuestion">'+iconStr+' '+item.name+'</li></a>'; 
+					});
+					str = str + '</ul><br/></div><div class="clear"></div>';
+							$('#search-results').show();
+							$('#search-results').html(str);
+						} else {
+							$('#search-results').hide();
+							$('#search-results').html('');
+						}
+					}
+				});
+			}else{
+				$('#search-results').hide();
+				$('#search-results').html('');
+			}
+		});
+	 $('#btnSearch').click(function(){
+		   var keyword = $('#search-strings').val();
+		   window.location.href = "https://www.tutorialspoint.com/search/"+keyword;
+	 });
+	 $(document).mouseup(function(e) 
+	 {
+		 var container = $('#search-results');            
+		 if (!container.is(e.target) && container.has(e.target).length === 0) 
+		 {
+			 container.hide();
+		 }
+	 });
+	</script>
+</div>
+<div class="menu-btn videos-btn">
+<a href="https://www.tutorialspoint.com/questions/index.php"><i class="fa fa-location-arrow"></i> <span>Q/A</span></a>
+</div>
+<div class="menu-btn library-btn">
+<a href="https://www.tutorialspoint.com/tutorialslibrary.htm"><i class="fa fa-books"></i> <span>Library</span></a>
+</div>
+<div class="menu-btn ebooks-btn">
+<a href="https://www.tutorialspoint.com/latest/ebooks"><i class="fa fa-book-reader"></i> <span>eBooks</span></a>
+</div>
+<div class="menu-btn videos-btn">
+<a href="https://www.tutorialspoint.com/latest/courses"><i class="fa fa-video"></i> <span>Courses</span></a> 
+</div>
+</div>
+</div>
+</div>
+<!-- Top main-menu Ends Here -->
+</header>
+<div class="mui-container-fluid content">
+<div class="mui-container">
+<!-- Tutorial ToC Starts Here -->
+<div class="mui-col-md-3 tutorial-toc">
+<!--<style>
+.ts{vertical-align:middle!important; text-align:center!important;}
+a.demo{font-family: "Open Sans",Arial,sans-serif; background:#f05c02; color:#fff; font-size:13px; padding:3px 10px; border:1px solid #f05c02; position:absolute; right:5px; margin:-6px 17px 0px 0px;}
+a.demo:hover{opacity:.8}
+pre.prettyprint {
+   border: 1px solid #d6d6d6;
+   background-color: #eee;
+   width: 98%;
+   border-radius: 0;
+   padding: 5px;
+   margin: 0;
+   margin-bottom: 10px; margin-top:15px;
+   font-size: 13px;
+   overflow: auto;}
+
+   .demo-view{width: 100%;
+    text-align: right;
+    position: relative;
+    top: 7px;}
+a.demo{font-family:"Open Sans",Arial,sans-serif;
+    background:#f05c02!important;
+    color: #fff;
+    font-size: 13px!important;
+    padding: 3px 10px;
+    border: 1px solid #f05c02;
+    position:relative!important;
+    right:unset!important;
+    margin: -6px 17px 0px 0px!important;}
+pre.prettyprint{margin-top:-5px!important;} 
+</style>-->
+<div class="mini-logo">
+<img src="/cprogramming/images/c-mini-logo.jpg" alt="CProgramming Tutorial" />
+</div>
+<ul class="toc chapters" >
+<li><a class="videolink" href="/c_language_online_training/index.asp" target="_blank"><img src="/cprogramming/images/c-programming-video-tutorials.jpg" alt="C Programming Video Tutorials" /></a></li>
+</ul>
+<ul class="toc chapters" >
+<li class="heading">C Programming Tutorial</li>
+<li><a href="/cprogramming/index.htm">C - Home</a></li>
+<li><a href="/cprogramming/c_overview.htm">C - Overview</a></li>
+<li><a href="/cprogramming/c_environment_setup.htm">C - Environment Setup</a></li>
+<li><a href="/cprogramming/c_program_structure.htm">C - Program Structure</a></li>
+<li><a href="/cprogramming/c_basic_syntax.htm">C - Basic Syntax</a></li>
+<li><a href="/cprogramming/c_data_types.htm">C - Data Types</a></li>
+<li><a href="/cprogramming/c_variables.htm">C - Variables</a></li>
+<li><a href="/cprogramming/c_constants.htm">C - Constants</a></li>
+<li><a href="/cprogramming/c_storage_classes.htm">C - Storage Classes</a></li>
+<li><a href="/cprogramming/c_operators.htm">C - Operators</a></li>
+<li><a href="/cprogramming/c_decision_making.htm">C - Decision Making</a></li>
+<li><a href="/cprogramming/c_loops.htm">C - Loops</a></li>
+<li><a href="/cprogramming/c_functions.htm">C - Functions</a></li>
+<li><a href="/cprogramming/c_scope_rules.htm">C - Scope Rules</a></li>
+<li><a href="/cprogramming/c_arrays.htm">C - Arrays</a></li>
+<li><a href="/cprogramming/c_pointers.htm">C - Pointers</a></li>
+<li><a href="/cprogramming/c_strings.htm">C - Strings</a></li>
+<li><a href="/cprogramming/c_structures.htm">C - Structures</a></li>
+<li><a href="/cprogramming/c_unions.htm">C - Unions</a></li>
+<li><a href="/cprogramming/c_bit_fields.htm">C - Bit Fields</a></li>
+<li><a href="/cprogramming/c_typedef.htm">C - Typedef</a></li>
+<li><a href="/cprogramming/c_input_output.htm">C - Input &amp; Output</a></li>
+<li><a href="/cprogramming/c_file_io.htm">C - File I/O</a></li>
+<li><a href="/cprogramming/c_preprocessors.htm">C - Preprocessors</a></li>
+<li><a href="/cprogramming/c_header_files.htm">C - Header Files</a></li>
+<li><a href="/cprogramming/c_type_casting.htm">C - Type Casting</a></li>
+<li><a href="/cprogramming/c_error_handling.htm">C - Error Handling</a></li>
+<li><a href="/cprogramming/c_recursion.htm">C - Recursion</a></li>
+<li><a href="/cprogramming/c_variable_arguments.htm">C - Variable Arguments</a></li>
+<li><a href="/cprogramming/c_memory_management.htm">C - Memory Management</a></li>
+<li><a href="/cprogramming/c_command_line_arguments.htm">C - Command Line Arguments</a></li>
+<li class="heading">C Programming useful Resources</li>
+<li><a href="/cprogramming/cprogramming_questions_answers.htm">C -  Questions &amp; Answers</a></li>
+<li><a href="/cprogramming/c_quick_guide.htm">C -  Quick Guide</a></li>
+<li><a href="/cprogramming/c_useful_resources.htm">C - Useful Resources</a></li>
+<li><a href="/cprogramming/cprogramming_discussion.htm">C - Discussion</a></li>
+</ul>
+<ul class="toc reading">
+<li class="sreading">Selected Reading</li>
+<li><a target="_top" href="/upsc_ias_exams.htm">UPSC IAS Exams Notes</a></li>
+<li><a target="_top" href="/developers_best_practices/index.htm">Developer's Best Practices</a></li>
+<li><a target="_top" href="/questions_and_answers.htm">Questions and Answers</a></li>
+<li><a target="_top" href="/effective_resume_writing.htm">Effective Resume Writing</a></li>
+<li><a target="_top" href="/hr_interview_questions/index.htm">HR Interview Questions</a></li>
+<li><a target="_top" href="/computer_glossary.htm">Computer Glossary</a></li>
+<li><a target="_top" href="/computer_whoiswho.htm">Who is Who</a></li>
+</ul>
+<div id="stickyparent">
+<div style="height:250px;width:300px;" id="sticky-ad">
+<div id="430c9911-782f-495d-88f9-69f58ca8c9a4" class="_ap_apex_ad" >
+<script>
+var adpushup = adpushup || {};
+adpushup.que = adpushup.que || [];
+adpushup.que.push(function() {
+adpushup.triggerAd("430c9911-782f-495d-88f9-69f58ca8c9a4");
+});
+</script>
+</div>
+</div>
+</div>
+</div>
+<!-- Tutorial ToC Ends Here -->
+<!-- Tutorial Content Starts Here -->
+<div class="mui-col-md-6 tutorial-content">
+<h1>C - File I/O</h1>
+<hr/>
+<div id="google-top-ads">
+<div class="top-ad-heading">Advertisements</div>
+<div style="text-align:center" class="google-top-ads">
+<div id="adp_top_ads" style="text-align:center!important;min-height:90px!important"></div>
+<script>
+     var adPos = document.getElementById('adp_top_ads');
+     var ad_id_720 = "8014640d-fd34-4b2e-9b1b-cc67234a2325";
+     var ad_id_650 = "2d1bb2c4-eb72-471d-9c80-1bf5514728c1";
+     var ad_id_300 = "df94a1a9-ae2f-432d-9a92-d93823ff4503";
+     var width = window.innerWidth;
+     var ad_id = ad_id_720;
+     if( width <= 768 ){
+        ad_id =  ad_id_300;
+     }else if( width <= 1435 ){
+        ad_id =  ad_id_650;
+     }
+     adPos.innerHTML = '<div id="' + ad_id + '" class="_ap_apex_ad"></div>';
+     var adpushup = adpushup || {};
+     adpushup.que = adpushup.que || [];
+     adpushup.que.push(function() {
+     adpushup.triggerAd(ad_id);
+     });
+</script>
+</div>
+</div>
+<br>
+<div class="mui-container-fluid button-borders">
+<div class="pre-btn">
+<a href="/cprogramming/c_input_output.htm"><i class="fal fa-chevron-circle-left"></i> Previous Page</a>
+</div>
+<div class="nxt-btn">
+<a href="/cprogramming/c_preprocessors.htm">Next Page <i class="fal fa-chevron-circle-right"></i>&nbsp;</a>
+</div>
+</div>
+<p>The last chapter explained the standard input and output devices handled by C programming language. This chapter cover how C programmers can create, open, close text or binary files for their data storage.</p>
+<p>A file represents a sequence of bytes, regardless of it being a text file or a binary file. C programming language provides access on high level functions as well as low level (OS level) calls to handle file on your storage devices. This chapter will take you through the important calls for file management.</p> 
+<h2>Opening Files</h2>
+<p>You can use the <b>fopen( )</b> function to create a new file or to open an existing file. This call will initialize an object of the type <b>FILE</b>, which contains all the information necessary to control the stream. The prototype of this function call is as follows &minus;</p>
+<pre class="result notranslate">
+FILE *fopen( const char * filename, const char * mode );
+</pre>
+<p>Here, <b>filename</b> is a string literal, which you will use to name your file, and access <b>mode</b> can have one of the following values &minus;</p>
+<table class="table table-bordered">
+<tr>
+<th style="text-align:center;">Sr.No.</th>
+<th style="text-align:center;">Mode &amp; Description</th>
+</tr>
+<tr>
+<td class="ts">1</td>
+<td><p><b>r</b></p>
+<p>Opens an existing text file for reading purpose.</p></td>
+</tr>
+<tr>
+<td class="ts">2</td>
+<td><p><b>w</b></p>
+<p>Opens a text file for writing. If it does not exist, then a new file is created. Here your program will start writing content from the beginning of the file.</p></td>
+</tr>
+<tr>
+<td class="ts">3</td>
+<td><p><b>a</b></p>
+<p>Opens a text file for writing in appending mode. If it does not exist, then a new file is created. Here your program will start appending content in the existing file content.</p></td>
+</tr>
+<tr>
+<td class="ts">4</td>
+<td><p><b>r+</b></p>
+<p>Opens a text file for both reading and writing.</p></td>
+</tr>
+<tr>
+<td class="ts">5</td>
+<td><p><b>w+</b></p>
+<p>Opens a text file for both reading and writing. It first truncates the file to zero length if it exists, otherwise creates a file if it does not exist.</p></td>
+</tr>
+<tr>
+<td class="ts">6</td>
+<td><p><b>a+</b></p>
+<p>Opens a text file for both reading and writing. It creates the file if it does not exist. The reading will start from the beginning but writing can only be appended.</p></td>
+</tr>
+</table>
+<p>If you are going to handle binary files, then you will use following access modes instead of the above mentioned ones &minus;</p>
+<pre class="result notranslate">
+"rb", "wb", "ab", "rb+", "r+b", "wb+", "w+b", "ab+", "a+b"
+</pre>
+<h2>Closing a File</h2>
+<p>To close a file, use the fclose( ) function. The prototype of this function is &minus;</p>
+<pre class="result notranslate">
+int fclose( FILE *fp );
+</pre>
+<p>The <b>fclose(-)</b> function returns zero on success, or <b>EOF</b> if there is an error in closing the file. This function actually flushes any data still pending in the buffer to the file, closes the file, and releases any memory used for the file. The EOF is a constant defined in the header file <b>stdio.h</b>.</p>
+<p>There are various functions provided by C standard library to read and write a file, character by character, or in the form of a fixed length string.</p>
+<h2>Writing a File</h2>
+<p>Following is the simplest function to write individual characters to a stream &minus;</p>
+<pre class="result notranslate">
+int fputc( int c, FILE *fp );
+</pre>
+<p>The function <b>fputc()</b> writes the character value of the argument c to the output stream referenced by fp. It returns the written character written on success otherwise <b>EOF</b> if there is an error. You can use the following functions to write a null-terminated string to a stream &minus;</p> 
+<pre class="result notranslate">
+int fputs( const char *s, FILE *fp );
+</pre>
+<p>The function <b>fputs()</b> writes the string <b>s</b> to the output stream referenced by fp. It returns a non-negative value on success, otherwise <b>EOF</b> is returned in case of any error. You can use <b>int fprintf(FILE *fp,const char *format, ...)</b> function as well to write a string into a file. Try the following example.</p>
+<p>Make sure you have <b>/tmp</b> directory available. If it is not, then before proceeding, you must create this directory on your machine.</p>
+<pre class="prettyprint notranslate">
+#include &lt;stdio.h&gt;
+
+main() {
+   FILE *fp;
+
+   fp = fopen("/tmp/test.txt", "w+");
+   fprintf(fp, "This is testing for fprintf...\n");
+   fputs("This is testing for fputs...\n", fp);
+   fclose(fp);
+}
+</pre>
+<p>When the above code is compiled and executed, it creates a new file <b>test.txt</b> in /tmp directory and writes two lines using two different functions. Let us read this file in the next section.</p>
+<h2>Reading a File</h2>
+<p>Given below is the simplest function to read a single character from a file &minus;</p>
+<pre class="result notranslate">
+int fgetc( FILE * fp );
+</pre>
+<p>The <b>fgetc()</b> function reads a character from the input file referenced by fp. The return value is the character read, or in case of any error, it returns <b>EOF</b>. The following function allows to read a string from a stream &minus;</p>
+<pre class="result notranslate">
+char *fgets( char *buf, int n, FILE *fp );
+</pre>
+<p>The functions <b>fgets()</b> reads up to n-1 characters from the input stream referenced by fp. It copies the read string into the buffer <b>buf</b>, appending a <b>null</b> character to terminate the string.</p>
+<p>If this function encounters a newline character '\n' or the end of the file EOF before they have read the maximum number of characters, then it returns only the characters read up to that point including the new line character. You can also use <b>int fscanf(FILE *fp, const char *format, ...)</b> function to read strings from a file, but it stops reading after encountering the first space character.</p>
+<pre class="prettyprint notranslate">
+#include &lt;stdio.h&gt;
+
+main() {
+
+   FILE *fp;
+   char buff[255];
+
+   fp = fopen("/tmp/test.txt", "r");
+   fscanf(fp, "%s", buff);
+   printf("1 : %s\n", buff );
+
+   fgets(buff, 255, (FILE*)fp);
+   printf("2: %s\n", buff );
+   
+   fgets(buff, 255, (FILE*)fp);
+   printf("3: %s\n", buff );
+   fclose(fp);
+
+}
+</pre>
+<p>When the above code is compiled and executed, it reads the file created in the previous section and produces the following result &minus;</p>
+<pre class="result notranslate">
+1 : This
+2: is testing for fprintf...
+
+3: This is testing for fputs...
+</pre>
+<p>Let's see a little more in detail about what happened here. First, <b>fscanf()</b> read just <b>This</b> because after that, it encountered a space, second call is for <b>fgets()</b> which reads the remaining line till it encountered end of line. Finally, the last call <b>fgets()</b> reads the second line completely.</p>
+<h2>Binary I/O Functions</h2>
+<p>There are two functions, that can be used for binary input and output &minus;</p>
+<pre class="prettyprint notranslate">
+size_t fread(void *ptr, size_t size_of_elements, size_t number_of_elements, FILE *a_file);
+              
+size_t fwrite(const void *ptr, size_t size_of_elements, size_t number_of_elements, FILE *a_file);
+</pre>
+<p>Both of these functions should be used to read or write blocks of memories - usually arrays or structures.</p>
+<div id="load">
+	<div class="mui-col-md-12 mui-col-sm-12 np">
+		<div class="row uk-min-height" id="ebooks_grid">
+			
+
+			<div class="clear"></div>
+			
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<div class="clear"></div>
+<div class="mui-container-fluid button-borders show" id="bottom_navigation">
+<div class="pre-btn">
+<a href="/cprogramming/c_input_output.htm"><i class="fal fa-chevron-circle-left"></i> Previous Page</a>
+<a class="hide-on-mobile" href="javascript:printPage();"><i class="fa fa-print"></i> Print Page</a>
+</div>
+<div class="nxt-btn">
+<a href="/cprogramming/c_preprocessors.htm">Next Page <i class="fal fa-chevron-circle-right"></i>&nbsp;</a>
+</div>
+</div>
+<div class="space-bottom" style="margin-bottom:20px;"></div>
+<div class="google-bottom-ads" id="google-bottom-ads">
+<div>Advertisements</div>
+<div>
+<div id="adp_bottom_ads"></div>
+<script>
+var adPos = document.getElementById('adp_bottom_ads');
+var mobile_ad_id = "a8a632a6-046e-4f5c-b25f-8bc82ac89fb2";
+var desktop_ad_id = "e7ddd6f7-1ab0-494a-bade-887daa4373a0";
+desktop_ad_id = "4951d1d6-24d4-4a31-afb7-2c22c489eae1";
+var adpushup = adpushup || {};
+adpushup.que = adpushup.que || [];
+adpushup.que.push(function() {
+var ad_id = window.innerWidth <= 768 ? mobile_ad_id : desktop_ad_id;
+adPos.innerHTML = '<div id="' + ad_id + '" class="_ap_apex_ad"></div>';
+adpushup.triggerAd(ad_id);
+});
+</script>
+</div>
+<div class="space-bottom"></div>
+</div>
+</div>
+<!-- Tutorial Content Ends Here -->
+<!-- Right Column Starts Here -->
+<div class="mui-col-md-2 google-right-ads" id="chapter-menu" style="display: none;">
+<!--
+<input type="hidden" id="vu" name="vu" value=""/>
+-->
+<div class="space-top"></div>
+<div class="mui-panel">
+<ul class="paid-menu" id="div-right-menu">
+<li><a class="hide-on-mobile" href="javascript:printPage();" title="Print this page"><i class="fa fa-print"></i> Print</a></li>
+<li><a href="javascript:void(0)" class="add_notes" title="Add Custom Notes" onclick="add_notes();"><i class="fa fa-edit"></i>&nbsp;Add Notes</a></li>
+<li><a href="javascript:void(0)" class="clsPage text-bookmark" id="text-bookmark" title="Add Bookmark" onclick="text_bookmark()"><i class="fal fa-bookmark"></i>&nbsp;Bookmark this page </a></li>
+<li><a href="javascript:void(0);" id="report_error_popup" onclick="report_error_popup();" title="Report Error"><i class="fal fa-bell"></i>&nbsp;Report Error</a></li>
+<li><a href="javascript:void(0);" id="suggestion_popup" title="Give Suggestions" onclick="suggestion_popup();"><i class="fal fa-badge-check"></i>&nbsp;Suggestions</a></li>
+</ul>
+<br>
+<div class="error_msg display_msg" style="color:red;text-align:left;" ></div>
+<div class="success_msg display_msg" style="color:green;text-align:left;" ></div>
+<div class="profile-my-notes" id="text_notes_div" style="display:none;">
+<textarea rows="10" class="text_notes" id="text_notes" name="text_notes" placeholder="Enter your custom notes..."></textarea>
+<br>
+<a href="javascript:void(0);" id="submit_text_notes" class="butn-save" onclick="submit_text_notes();"> Save</a>
+<a href="javascript:void(0);" class="pop-no butn-cancel" onclick="notesClose();"> Close</a>
+<p class="notes_msg"  ></p>
+</div>
+<div class="bottom-menu">
+<div class="tp-btn" style="width: auto;"><i class="fal fa-box-up"></i> <a href="https://www.tutorialspoint.com/market/student/dashboard.jsp">Dashboard</a></div>
+<div class="tp-btn" style="width: auto;" id="btnLogout"><i class="fal fa-sign-out-alt"></i><a href="javascript:void(0)">Logout</a></div>
+</div>
+</div>
+</div>
+<div class="mui-col-md-2 google-right-ads" id="google-right-ads">
+<div class="space-top"></div>
+<div class="google-right-ad" style="margin: 0px auto !important;margin-top:5px;min-height:250px!important">
+<div id="f0f6cff6-393d-4170-b63a-d9ff06ca9f25" class="_ap_apex_ad">
+<script>
+if( window.innerWidth > 768 ){
+   var adpushup = adpushup || {};
+   adpushup.que = adpushup.que || [];
+   adpushup.que.push(function() {
+   adpushup.triggerAd("f0f6cff6-393d-4170-b63a-d9ff06ca9f25");
+   });
+}
+</script>
+</div>
+</div>
+<div class="google-right-ad" style="margin-top:16px;min-height:250px!important">
+<div id="5c0affd5-724a-475c-bfcd-cecbc7660c36" class="_ap_apex_ad">
+<script>
+if( window.innerWidth > 768 ){
+   var adpushup = adpushup || {};
+   adpushup.que = adpushup.que || [];
+   adpushup.que.push(function() {
+   adpushup.triggerAd("5c0affd5-724a-475c-bfcd-cecbc7660c36");
+   });
+}
+</script>
+</div>
+</div>
+<div class="google-right-ad" style="margin-top:16px;margin-bottom:15px;min-height:600px!important">
+<div id="8f8814c2-d64c-4d26-9cb9-543653c0b48f" class="_ap_apex_ad">
+<script>
+if( window.innerWidth > 768 ){
+   var adpushup = adpushup || {};
+   adpushup.que = adpushup.que || [];
+   adpushup.que.push(function() {
+   adpushup.triggerAd("8f8814c2-d64c-4d26-9cb9-543653c0b48f");
+   });
+}
+</script>
+</div>
+</div>
+<div class="space-bottom" style="margin-bottom:15px;"></div>
+</div>
+<!-- Right Column Ends Here -->
+</div>
+</div>
+<div class="clear"></div>
+<footer id="footer">
+<div class="mui--text-center">
+<div class="mui--text-caption mui--text-light">
+<a href="/index.htm" class="logo"><img class="img-responsive" src="/images/logo-black.png" alt="Tutorials Point" title="Tutorials Point"></a>
+</div>
+<ul class="mui-list--inline mui--text-body2 mui--text-light">
+<li><a href="/about/index.htm"><i class="fal fa-globe"></i> About us</a></li>
+<li><a href="/about/return_refund_policy.htm"> <i class="fal fa-asterisk"></i> Refund Policy</a></li>
+<li><a href="/about/about_terms_of_use.htm"><i class="fal fa-asterisk"></i> Terms of use</a></li>
+<li><a href="/about/about_privacy.htm"> <i class="fal fa-shield-check"></i> Privacy Policy</a></li>
+<li><a href="/about/faq.htm"><i class="fal fa-question-circle"></i> FAQ's</a></li>
+<li><a href="/about/contact_us.htm"><i class="fal fa-map-marker-alt"></i> Contact</a></li>
+</ul>
+<div class="mui--text-caption mui--text-light bottom-copyright-text">&copy; Copyright 2021. All Rights Reserved.</div>
+</div>
+<div id="privacy-banner">
+  <div>
+    <p>
+      We make use of cookies to improve our user experience. By using this website, you agree with our Cookies Policy.
+      <a id="banner-accept" href="javascript:void(0)">Agree</a>
+      <a id="banner-learn" href="/about/about_cookies.htm" target="_blank">Learn more</a>
+    </p>
+  </div>
+</div>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-232293-6"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-232293-6');
+</script>
+<script src="https://www.tutorialspoint.com/themes/js/text_menu.js"></script>
+<script>
+$(document).ready(function (){
+    var cval = readCookie('subscription_purchased');
+    if(cval == '1'){
+          // logged in and purchased subscription.
+          $('#google-right-ads').remove();
+          $('#adp1').remove();
+          $('#adp2').remove();
+          $('#stickyparent').remove();
+          $('#google-top-ads').remove();
+          $('#adp_top_ads').remove();
+          $('#google-bottom-ads').remove();
+          $('.tutorial-content hr').remove();
+          $('.login').remove();
+          $('#chapter-menu').show();
+          $('.content h1').css("border-bottom", "none");
+          $('.google-right-ads').css("padding-right", "0px");
+          $('.tutorial-content').css("border-radius", "10px");
+          $('#chapter-menu .mui-panel').css("border-radius", "10px");
+     }
+     $(document).on("click", "#btnLogout", function(){
+       $.ajax({
+           type: 'GET',
+           dataType: 'JSON',
+           cache: false,
+           url: "https://www.tutorialspoint.com/market/logout.jsp",
+           complete: function (xhr, statusText) {
+               if(xhr.status == 200) {
+                   window.location.href = 'https://www.tutorialspoint.com/index.htm'
+               } else {
+                   console.log("something went wrong");
+               }
+           }
+       });
+    });
+});
+</script>
+</footer>
+</body>
+</html>

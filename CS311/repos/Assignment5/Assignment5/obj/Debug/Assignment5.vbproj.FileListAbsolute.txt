@@ -1,0 +1,12 @@
+C:\Users\Nathan VanSnepson\Desktop\Classes\CS311\repos\Assignment5\Assignment5\bin\Debug\Assignment5.exe.config
+C:\Users\Nathan VanSnepson\Desktop\Classes\CS311\repos\Assignment5\Assignment5\bin\Debug\Assignment5.exe
+C:\Users\Nathan VanSnepson\Desktop\Classes\CS311\repos\Assignment5\Assignment5\bin\Debug\Assignment5.pdb
+C:\Users\Nathan VanSnepson\Desktop\Classes\CS311\repos\Assignment5\Assignment5\bin\Debug\Assignment5.xml
+C:\Users\Nathan VanSnepson\Desktop\Classes\CS311\repos\Assignment5\Assignment5\obj\Debug\Assignment5.vbproj.AssemblyReference.cache
+C:\Users\Nathan VanSnepson\Desktop\Classes\CS311\repos\Assignment5\Assignment5\obj\Debug\Assignment5.vbproj.SuggestedBindingRedirects.cache
+C:\Users\Nathan VanSnepson\Desktop\Classes\CS311\repos\Assignment5\Assignment5\obj\Debug\Assignment5.Resources.resources
+C:\Users\Nathan VanSnepson\Desktop\Classes\CS311\repos\Assignment5\Assignment5\obj\Debug\Assignment5.vbproj.GenerateResource.cache
+C:\Users\Nathan VanSnepson\Desktop\Classes\CS311\repos\Assignment5\Assignment5\obj\Debug\Assignment5.vbproj.CoreCompileInputs.cache
+C:\Users\Nathan VanSnepson\Desktop\Classes\CS311\repos\Assignment5\Assignment5\obj\Debug\Assignment5.exe
+C:\Users\Nathan VanSnepson\Desktop\Classes\CS311\repos\Assignment5\Assignment5\obj\Debug\Assignment5.xml
+C:\Users\Nathan VanSnepson\Desktop\Classes\CS311\repos\Assignment5\Assignment5\obj\Debug\Assignment5.pdb
